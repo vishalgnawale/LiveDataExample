@@ -39,6 +39,13 @@ public class Repository {
 
                 if(leaderWrapper !=null && leaderWrapper.getmData()!=null){
                     leaders=(ArrayList<Leaders>) leaderWrapper.getmData();
+                    Log.d("Succes Data",leaders.get(1).getName());
+                    Log.d("Succes Data",leaders.get(1).getAbbr());
+                    Log.d("Succes Data",leaders.get(1).getDesignation());
+                    Log.d("Succes Data",leaders.get(1).getDescription());
+                    Log.d("Succes Data",leaders.get(1).getFeatured());
+                    Log.d("Succes Data",leaders.get(1).getId());
+                    Log.d("Succes Data",leaders.get(1).getImage());
                     leadersMutableLiveData.setValue(leaders);
                 }
             }

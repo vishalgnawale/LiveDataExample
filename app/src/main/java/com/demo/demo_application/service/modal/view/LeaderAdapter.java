@@ -12,6 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.demo.demo_application.R;
 import com.demo.demo_application.service.modal.Leaders;
+import com.demo.demo_application.service.modal.repository.Constants;
 
 import java.util.List;
 
@@ -76,17 +77,17 @@ public class LeaderAdapter extends RecyclerView.Adapter<BaseViewHolder> {
             super.onBind(position);
             Leaders leaders=leadersList.get(position);
             if(leaders.getImage()!=null){
-                Glide.with(itemView.getContext()).load(leaders.getImage()).into(leaderImage);
+                Glide.with(itemView.getContext()).load(Constants.BASE_URL+leaders.getImage()).into(leaderImage);
 
             }
             if(leaders.getName()!=null){
                 name.setText(leaders.getName());
             }
             if(leaders.getDescription()!=null){
-                name.setText(leaders.getDescription());
+                description.setText(leaders.getDescription());
             }
             if(leaders.getDesignation()!=null){
-                name.setText(leaders.getDesignation());
+                designation.setText(leaders.getDesignation());
             }
         }
     }

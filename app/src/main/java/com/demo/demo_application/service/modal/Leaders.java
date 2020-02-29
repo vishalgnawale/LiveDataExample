@@ -4,23 +4,19 @@ import com.google.gson.annotations.SerializedName;
 
 public class Leaders {
 
-    @SerializedName("id")
-    int id;
-    @SerializedName("name")
+    String id;
     String name;
-    @SerializedName("designation")
-    String designation;
-    @SerializedName("image")
     String image;
-    @SerializedName("description")
+    String designation;
+    String abbr;
+    String featured;
     String description;
 
-
-    public int getId() {
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -32,6 +28,14 @@ public class Leaders {
         this.name = name;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
+
     public String getDesignation() {
         return designation;
     }
@@ -40,12 +44,20 @@ public class Leaders {
         this.designation = designation;
     }
 
-    public String getImage() {
-        return image;
+    public String getAbbr() {
+        return abbr;
     }
 
-    public void setImage(String image) {
-        this.image = image;
+    public void setAbbr(String abbr) {
+        this.abbr = abbr;
+    }
+
+    public String getFeatured() {
+        return featured;
+    }
+
+    public void setFeatured(String featured) {
+        this.featured = featured;
     }
 
     public String getDescription() {
@@ -55,4 +67,5 @@ public class Leaders {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }
